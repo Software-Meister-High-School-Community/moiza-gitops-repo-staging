@@ -1,0 +1,11 @@
+{
+  "Name": "moiza-spring",
+  "Host": "stag-api.moiza.app",
+  "ImageRegistry": "registry.hub.docker.com",
+  "ImageTag": "28565f7e529cb0a6102f370a92e804173169bda5",
+  "ContainerPort": 8080,
+  "Prefix": "/moiza-speing",
+  "Environment": "stag",
+  "Type": "be"
+}
+
