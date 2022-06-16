@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: moiza-stag
+  namespace: argocd
+
+spec:
+  project: moiza-stag
+
+  source:
+    repoURL: https://github.com/Software-Meister-High-School-Community/moiza-gitops-repo-staging.git
+    targetRevision: HEAD
+    path: apps
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: moiza-stag
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
